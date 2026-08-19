@@ -1,5 +1,27 @@
 ---
 en:
+  common:
+    title: Books App
+    link_label:
+      index: Back to books
+      show: Show this book
+      new: New book
+      edit: Show this book
+    button_label:
+      destroy: Destroy this book
+  books:
+    index:
+      title: Books
+    new:
+      title: New book
+    create:
+      success: Book was successfully created.
+    edit:
+      title: Editing book
+    update:
+      success: Book was successfully updated.
+    destroy:
+      success: Book was successfully destroyed.
   activerecord:
     errors:
       messages:
@@ -147,8 +169,8 @@ en:
     template:
       body: 'There were problems with the following fields:'
       header:
-        one: "%{count} error prohibited this %{model} from being saved"
-        other: "%{count} errors prohibited this %{model} from being saved"
+        one: "%{count} error prohibited this book from being saved:"
+        other: "%{count} errors prohibited this book from being saved:"
   helpers:
     select:
       prompt: Please select

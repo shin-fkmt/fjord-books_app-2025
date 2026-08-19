@@ -1,5 +1,27 @@
 ---
 ja:
+  common:
+    title: 書籍アプリ
+    link_label:
+      index: 書籍一覧
+      show: 書籍参照
+      new: 書籍登録
+      edit: 書籍編集
+    button_label:
+      destroy: 書籍削除
+  books:
+    index:
+      title: 書籍一覧
+    new:
+      title: 書籍登録
+    create:
+      success: "書籍「%{title}」を登録しました"
+    edit:
+      title: 書籍編集
+    update:
+      success: "書籍「%{title}」を更新しました"
+    destroy:
+      success: "書籍「%{title}」を削除しました"
   activerecord:
     errors:
       messages:
@@ -113,7 +135,9 @@ ja:
       wrong_length: は%{count}文字で入力してください
     template:
       body: 次の項目を確認してください
-      header: "%{model}に%{count}個のエラーが発生しました"
+      header:
+        one: "%{count}個のエラーが発生しました"
+        other: "複数のエラーが発生しました"
   helpers:
     select:
       prompt: 選択してください
