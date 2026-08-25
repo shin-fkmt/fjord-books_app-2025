@@ -15,13 +15,13 @@ ja:
     new:
       title: 書籍登録
     create:
-      success: "書籍「%{title}」を登録しました"
+      success: 書籍の登録に成功しました。
     edit:
       title: 書籍編集
     update:
-      success: "書籍「%{title}」を更新しました"
+      success: 書籍の更新に成功しました。
     destroy:
-      success: "書籍「%{title}」を削除しました"
+      success: 書籍の削除に成功しました。
   activerecord:
     errors:
       messages:
