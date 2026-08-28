@@ -9,3 +9,15 @@ ja:
         memo: メモ  #g
         picture: 写真  #g
         title: タイトル  #g
+
+    errors:
+      models:
+        book:
+          attributes:
+            author:
+              blank: は必須です。（著者用）
+            memo:
+              blank: は必須です。（メモ用）
+            title:
+              blank: は必須です。（タイトル用）
+

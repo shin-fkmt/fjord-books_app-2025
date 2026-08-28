@@ -11,3 +11,14 @@ en:
         memo: Memo  #g
         picture: Picture  #g
         title: Title  #g
+
+    errors:
+      models:
+        book:
+          attributes:
+            author:
+              blank: is required（for Author）
+            memo:
+              blank: is required（for memo）
+            title:
+              blank: is required（for title）
