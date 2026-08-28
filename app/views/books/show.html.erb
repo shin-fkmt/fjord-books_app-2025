@@ -5,8 +5,8 @@
 </div>
 
 <nav class="page-nav">
-  <%= link_to t('common.link_label.edit'), edit_book_path(@book) %> |
-  <%= link_to t('common.link_label.index'), books_path %>
+  <%= link_to t('common.link_label.edit', name: Book.model_name.human.downcase), edit_book_path(@book) %> |
+  <%= link_to t('common.link_label.index', name: Book.model_name.human(count: 2).downcase), books_path %>
 
-  <%= button_to t('common.button_label.destroy'), @book, method: :delete %>
+  <%= button_to t('common.button_label.destroy', name: Book.model_name.human.downcase), @book, method: :delete %>
 </nav>

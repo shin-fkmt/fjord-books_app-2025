@@ -1,27 +1,26 @@
 ---
 ja:
   common:
-    title: 書籍アプリ
+    title: "%{name}アプリ"
     link_label:
-      index: 書籍一覧
-      show: 書籍参照
-      new: 書籍登録
-      edit: 書籍編集
+      index: "%{name}一覧"
+      show: "%{name}参照"
+      new: "%{name}登録"
+      edit: "%{name}編集"
     button_label:
-      destroy: 書籍削除
-  books:
+      destroy: "%{name}削除"
     index:
-      title: 書籍一覧
+      title: "%{name}一覧"
     new:
-      title: 書籍登録
+      title: "%{name}登録"
     create:
-      success: 書籍の登録に成功しました。
+      success: "%{name}の登録に成功しました。"
     edit:
-      title: 書籍編集
+      title: "%{name}編集"
     update:
-      success: 書籍の更新に成功しました。
+      success: "%{name}の更新に成功しました。"
     destroy:
-      success: 書籍の削除に成功しました。
+      success: "%{name}の削除に成功しました。"
   activerecord:
     errors:
       messages:

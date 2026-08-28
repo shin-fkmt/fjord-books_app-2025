@@ -1,27 +1,26 @@
 ---
 en:
   common:
-    title: Books App
+    title: "%{name} App"
     link_label:
-      index: Back to books
-      show: Show this book
-      new: New book
-      edit: Show this book
+      index: "Back to %{name}"
+      show: "Show this %{name}"
+      new: "New %{name}"
+      edit: "Show this %{name}"
     button_label:
-      destroy: Destroy this book
-  books:
+      destroy: "Destroy this %{name}"
     index:
-      title: Books
+      title: "%{name}"
     new:
-      title: New book
+      title: "New %{name}"
     create:
-      success: Book was successfully created.
+      success: "%{name} was successfully created."
     edit:
-      title: Editing book
+      title: "Editing %{name}"
     update:
-      success: Book was successfully updated.
+      success: "%{name} was successfully updated."
     destroy:
-      success: Book was successfully destroyed.
+      success: "%{name} was successfully destroyed."
   activerecord:
     errors:
       messages:
