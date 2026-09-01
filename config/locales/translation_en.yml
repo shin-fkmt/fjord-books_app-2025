@@ -11,8 +11,3 @@ en:
         memo: Memo  #g
         picture: Picture  #g
         title: Title  #g
-
-    errors:
-      models:
-        book:
-          blank: is required
