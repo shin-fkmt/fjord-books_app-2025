@@ -1,5 +1,8 @@
 ---
 ja:
+  layouts:
+    application:
+      logout: ログアウト
   activerecord:
     errors:
       messages:
