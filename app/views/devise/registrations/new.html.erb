@@ -21,21 +21,6 @@
     <p><%= f.password_field :password_confirmation, autocomplete: "new-password" %></p>
   </div>
 
-  <div class="field">
-    <p><%= f.label :postal_code %></p>
-    <p><%= f.text_field :postal_code, autocomplete: "postal-code" %></p>
-  </div>
-
-  <div class="field">
-    <p><%= f.label :address %></p>
-    <p><%= f.text_field :address, autocomplete: "street-address" %></p>
-  </div>
-
-  <div class="field">
-    <p><%= f.label :self_introduction_text %></p>
-    <p><%= f.textarea :self_introduction_text %></p>
-  </div>
-
   <div class="actions">
     <%= f.submit t('.sign_up') %>
   </div>
