@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_one_attached :avatar do |attachable|
     attachable.variant :icon, resize_to_limit: [100, 100]
   end
+
+  validates :avatar, content_type: %i[jpg png gif]
 end
