@@ -1,0 +1,21 @@
+<% title = t('views.common.title_index', name: i18n_pluralize(DailyReport.model_name.human)) %>
+<% content_for :title, title %>
+
+<h1><%= title %></h1>
+
+<div id="daily_reports" class="index-items">
+  <% @daily_reports.each do |daily_report| %>
+    <div class="index-item">
+      <%= render daily_report %>
+      <p>
+        <%= link_to t('views.common.show', name: DailyReport.model_name.human.downcase), daily_report %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= paginate @daily_reports %>
+
+<nav class="page-nav">
+  <%= link_to t('views.common.new', name: DailyReport.model_name.human.downcase), new_daily_report_path %>
+</nav>

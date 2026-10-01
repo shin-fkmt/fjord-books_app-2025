@@ -1,0 +1,12 @@
+<h1><%= t('views.common.title_show', name: DailyReport.model_name.human) %></h1>
+
+<div class="show-item">
+  <%= render @daily_report %>
+</div>
+
+<nav class="page-nav">
+  <%= link_to t('views.common.edit', name: DailyReport.model_name.human.downcase), edit_daily_report_path(@daily_report) %> |
+  <%= link_to t('views.common.back', name: i18n_pluralize(DailyReport.model_name.human.downcase)), daily_reports_path %>
+
+  <%= button_to t('views.common.destroy', name: DailyReport.model_name.human.downcase), @daily_report, method: :delete %>
+</nav>
