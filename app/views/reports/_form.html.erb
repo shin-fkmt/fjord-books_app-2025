@@ -1,10 +1,10 @@
-<%= form_with(model: daily_report) do |form| %>
-  <% if daily_report.errors.any? %>
+<%= form_with(model: report) do |form| %>
+  <% if report.errors.any? %>
     <div style="color: red">
-      <h2><%= t('views.common.validation_error', errors: i18n_error_count(daily_report.errors.count), name: DailyReport.model_name.human.downcase) %>:</h2>
+      <h2><%= t('views.common.validation_error', errors: i18n_error_count(report.errors.count), name: Report.model_name.human.downcase) %>:</h2>
 
       <ul>
-        <% daily_report.errors.each do |error| %>
+        <% report.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
