@@ -2,6 +2,7 @@
 
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
+  before_action :redirect_uneditable_report, only: %i[edit update destroy]
 
   def index
     @reports = Report.order(:id).page(params[:page])
@@ -16,7 +17,7 @@ class ReportsController < ApplicationController
   def edit; end
 
   def create
-    @report = Report.new(report_params)
+    @report = current_user.reports.build(report_params)
 
     respond_to do |format|
       if @report.save
@@ -53,5 +54,9 @@ class ReportsController < ApplicationController
 
   def report_params
     params.expect(report: %i[title body])
+  end
+
+  def redirect_uneditable_report
+    redirect_to root_url, status: :see_other unless current_user == @report.user
   end
 end
