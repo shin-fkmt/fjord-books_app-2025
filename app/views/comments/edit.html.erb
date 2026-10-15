@@ -1,0 +1,12 @@
+<% title = t('views.common.title_edit', name: Comment.model_name.human.downcase) %>
+<% content_for :title, title %>
+
+<h1><%= title %></h1>
+
+<%= render 'form', comment: @comment, commentable_id: @comment.commentable_id, commentable_type: @comment.commentable_type %>
+
+<br>
+
+<div>
+  <%= link_to t('views.common.back', name: i18n_pluralize(Comment.model_name.human.downcase)), :back %>
+</div>

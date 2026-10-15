@@ -4,6 +4,14 @@
   <%= render @book %>
 </div>
 
+<div id="comments" class="show-item">
+  <%= render(@book.comments) || t('views.common.no_data', name: Comment.model_name.human.downcase) %>
+</div>
+
+<div class="show-item">
+  <%= render 'comments/form', comment: @comment, commentable_id: @book.id, commentable_type: 'Book' %>
+</div>
+
 <nav class="page-nav">
   <%= link_to t('views.common.edit', name: Book.model_name.human.downcase), edit_book_path(@book) %> |
   <%= link_to t('views.common.back', name: i18n_pluralize(Book.model_name.human.downcase)), books_path %>
