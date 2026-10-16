@@ -5,7 +5,7 @@
   </p>
   <p>
     <strong><%= Comment.human_attribute_name(:updated_at) %>:</strong>
-    <%= comment.updated_at %>
+    <%= l(comment.updated_at, format: :long) %>
   </p>
   <p>
     <strong><%= Comment.human_attribute_name(:comment) %>:</strong>
