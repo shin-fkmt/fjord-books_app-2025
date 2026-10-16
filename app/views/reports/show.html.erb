@@ -4,6 +4,14 @@
   <%= render @report %>
 </div>
 
+<div id="comments" class="show-item">
+  <%= render(@report.comments) || t('views.common.no_data', name: Comment.model_name.human.downcase) %>
+</div>
+
+<div class="show-item">
+  <%= render 'comments/form', comment: @comment, commentable_id: @report.id, commentable_type: 'Report' %>
+</div>
+
 <nav class="page-nav">
   <% if current_user == @report.user %>
     <%= link_to t('views.common.edit', name: Report.model_name.human.downcase), edit_report_path(@report) %> |
