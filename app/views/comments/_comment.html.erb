@@ -4,8 +4,8 @@
     <%= comment.user.name.presence || comment.user.email %>
   </p>
   <p>
-    <strong><%= Comment.human_attribute_name(:created_at) %>:</strong>
-    <%= comment.created_at %>
+    <strong><%= Comment.human_attribute_name(:updated_at) %>:</strong>
+    <%= comment.updated_at %>
   </p>
   <p>
     <strong><%= Comment.human_attribute_name(:comment) %>:</strong>
