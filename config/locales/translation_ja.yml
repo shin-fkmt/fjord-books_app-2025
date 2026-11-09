@@ -24,4 +24,4 @@ ja:
         created_at: 投稿日
       comment:
         comment: コメント
-        updated_at: 投稿日時
+        created_at: 投稿日時
