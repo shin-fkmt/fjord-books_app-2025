@@ -9,7 +9,7 @@
 </div>
 
 <div class="show-item">
-  <%= render 'comments/form', comment: @comment, commentable_id: @book.id, commentable_type: 'Book' %>
+  <%= render 'comments/form', parent: @book, comment: @comment %>
 </div>
 
 <nav class="page-nav">

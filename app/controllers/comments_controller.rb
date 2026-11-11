@@ -7,7 +7,10 @@ class CommentsController < ApplicationController
   def edit; end
 
   def create
-    @comment = current_user.comments.build(comment_params)
+    commentable = params.select { |key| key.end_with?('_id') }
+    commentable_id = commentable[commentable.keys[0]]
+    commentable_type = commentable.keys[0].delete_suffix('_id').capitalize
+    @comment = current_user.comments.build(comment_params.merge(commentable_id: commentable_id, commentable_type: commentable_type))
 
     respond_to do |format|
       if @comment.save
@@ -52,7 +55,7 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.expect(comment: %i[comment commentable_id commentable_type])
+    params.expect(comment: %i[comment])
   end
 
   def redirect_uneditable_comment
