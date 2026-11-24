@@ -3,7 +3,7 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[edit update destroy]
 
-  EXTRACT_ID_FROM_URL_PATTERN = %r{http://localhost:3000/reports/(\d+)}
+  EXTRACT_IDS_FROM_URL_PATTERN = %r{http://localhost:3000/reports/(\d+)}
 
   def index
     @reports = Report.includes(:user).order(id: :desc).page(params[:page])
@@ -53,7 +53,7 @@ class ReportsController < ApplicationController
   end
 
   def mentioning_report_ids
-    report_params['content'].scan(EXTRACT_ID_FROM_URL_PATTERN).flatten.uniq
+    report_params['content'].scan(EXTRACT_IDS_FROM_URL_PATTERN).flatten.uniq
   end
 
   def report_params
