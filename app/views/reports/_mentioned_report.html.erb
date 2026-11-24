@@ -5,7 +5,7 @@
       <% mentioned_reports.each do |mentioned_report| %>
         <li>
           <p>
-            <a href='<%= "http://localhost:3000/reports/#{mentioned_report.id}" %>'><%= mentioned_report.title %></a>
+            <%= link_to mentioned_report.title, mentioned_report %>
             <time><%= l(mentioned_report.created_at, format: :long) %></time>
           </p>
         </li>
