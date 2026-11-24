@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  URL_TO_LINK_PATTERN = %r{http://localhost:3000/reports/\d+}
+
   # localeに応じて複数形の表記を変える
   # - 日本語の場合 => 本
   # - 英語の場合 => books
@@ -16,6 +18,8 @@ module ApplicationHelper
   end
 
   def format_content(content)
-    safe_join(content.split("\n"), tag.br)
+    escaped_content = safe_join(content.split("\n"), tag.br)
+    linked_content = escaped_content.gsub(URL_TO_LINK_PATTERN) { |url| link_to nil, url }
+    sanitize(linked_content, tags: %w[br a], attributes: %w[href])
   end
 end

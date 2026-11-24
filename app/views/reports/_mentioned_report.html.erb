@@ -1,0 +1,15 @@
+<div>
+  <% if (mentioned_reports.present?) %>
+    <p><%= t('.title') %></p>
+    <ul>
+      <% mentioned_reports.each do |mentioned_report| %>
+        <li>
+          <p>
+            <a href='<%= "http://localhost:3000/reports/#{mentioned_report.id}" %>'><%= mentioned_report.title %></a>
+            <time><%= l(mentioned_report.created_at, format: :long) %></time>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
