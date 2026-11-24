@@ -1,0 +1,15 @@
+<div>
+  <% if (mentioned_reports.present?) %>
+    <p><%= t('.title') %></p>
+    <ul>
+      <% mentioned_reports.each do |mentioned_report| %>
+        <li>
+          <p>
+            <%= link_to mentioned_report.title, mentioned_report %>
+            <time><%= l(mentioned_report.created_at, format: :long) %></time>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
